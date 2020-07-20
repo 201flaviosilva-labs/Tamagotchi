@@ -1,20 +1,18 @@
 html body {
-  width: 100vw;
-  height: 100vh;
+  padding: 10px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
-  gap: 10px 10px;
+  gap: 10px;
   grid-template-areas: "Header" "Main";
 }
 
 html body header {
   grid-area: Header;
-  margin: 10px;
 }
 
 html body header h1 {
-  padding: 10px;
+  padding: 10px 0;
   background-color: #00a7ca;
   border-radius: 10px;
   text-align: center;
@@ -24,32 +22,33 @@ html body header h1 {
 
 html body main {
   grid-area: Main;
-  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html body main div.Jogo {
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, auto) 1fr auto;
   gap: 6px 6px;
   grid-template-areas: "Nome Nome" "Estado Estado" "Imagem BtnsAcoes" "BtnsLugar BtnsLugar";
-  grid-area: Main;
 }
 
-html body main div#Nome {
+html body main div.Jogo div.Nome {
+  background-color: red;
   grid-area: Nome;
-  margin: 4px;
-  padding: 10px;
+  margin: 4px 0;
+  padding: 6px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   font-size: 20px;
   border: 1px solid black;
   border-radius: 10px;
 }
 
-html body main div#Nome p {
-  width: 80%;
-  margin: 10px;
-}
-
-html body main div#Nome button#AlterarNomeBtn {
+html body main div.Jogo div.Nome button#AlterarNomeBtn {
   padding: 10px 16px;
   border: 1px dashed blue;
   border-radius: 6px;
@@ -59,24 +58,32 @@ html body main div#Nome button#AlterarNomeBtn {
   cursor: pointer;
 }
 
-html body main div#Nome button#AlterarNomeBtn:hover {
+html body main div.Jogo div.Nome button#AlterarNomeBtn:hover {
   background-color: #00a7ca;
 }
 
-html body main div#Nome button#AlterarNomeBtn:active {
+html body main div.Jogo div.Nome button#AlterarNomeBtn:active {
   background-color: #75b1f7;
 }
 
-html body main div#Estado {
+html body main div.Jogo div.Estado {
+  background-color: green;
   grid-area: Estado;
 }
 
-html body main div#Estado ul {
+html body main div.Jogo div.Estado ul {
   display: flex;
   flex-direction: column;
 }
 
-html body main div#Tela {
+html body main div.Jogo div.Estado ul li {
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+}
+
+html body main div.Jogo div.Tela {
+  background-color: blue;
   grid-area: Imagem;
   position: relative;
   border: 1px solid black;
@@ -85,7 +92,7 @@ html body main div#Tela {
   border-radius: 10px;
 }
 
-html body main div#Tela img {
+html body main div.Jogo div.Tela img {
   position: absolute;
   left: 0;
   top: 0;
@@ -93,17 +100,21 @@ html body main div#Tela img {
   border-radius: 10px;
 }
 
-html body main div#BtnAcoes {
+html body main div.Jogo div.BtnAcoes {
+  background-color: orange;
   grid-area: BtnsAcoes;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
-html body main div#BtnLocal {
+html body main div.Jogo div.BtnLocal {
+  background-color: yellow;
   grid-area: BtnsLugar;
 }
 
-html body main div#BtnLocal img {
+html body main div.Jogo div.BtnLocal img {
   border: 1px solid black;
   border-radius: 50%;
 }

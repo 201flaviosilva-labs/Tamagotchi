@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./CSS/reset.css">
     <link rel="stylesheet" href="./Style/style.min.css">
     <title>Tamagotchi</title>
 </head>
@@ -15,42 +16,58 @@
     </header>
 
     <main>
-        <div id="Nome">
-            <p>Max</p><button id="AlterarNomeBtn">Alteral</button>
-        </div>
+        <div class="Jogo">
+            <div class="Nome">
+                <p>Max</p><button id="AlterarNomeBtn">Alteral</button>
+            </div>
 
-        <div id="Estado">
-            <ul>
-                <li>
-                    <img src="#" alt="Saúde">
-                    <div class="ProgressBar" id="BarraSaude">
-                        <div><span>Saúde</span></div>
-                    </div>
-                </li>
-                <li><img src="#" alt="Fome">Fome</li>
-                <li><img src="#" alt="Energia">Energia</li>
-                <li><img src="#" alt="Bexiga">Bexiga</li>
-            </ul>
-        </div>
+            <div class="Estado">
+                <ul>
+                    <li>
+                        <img src="./Img/Icons/Estado/SaúdeIcon.png">
+                        <div class="ProgressBarBorder" id="BarraSaude">
+                            <div><span>Saúde</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="#">
+                        <div class="ProgressBarBorder" id="BarraFome">
+                            <div><span>Fome</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./Img/Icons/Estado/EnergiaIcon.png">
+                        <div class="ProgressBarBorder" id="BarraEnergia">
+                            <div><span>Energia</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="#">
+                        <div class="ProgressBarBorder" id="BarraBexiga">
+                            <div><span>Bexiga</span></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
 
-        <div id="Tela">
-            <img src="" alt="Local" class="ImgLocal">
-            <img src="./Img/Emoções/FelizForte.png" alt="Hope" class="ImgPersonagem">
-        </div>
+            <div class="Tela">
+                <img src="" class="ImgLocal">
+                <img src="./Img/Emoções/FelizForte.png" alt="Max" class="ImgPersonagem">
+            </div>
 
-        <div id="BtnAcoes">
-            <img src="" alt="Ação 1">
-            <img src="" alt="Ação 2">
-            <img src="" alt="Ação 3">
-            <img src="" alt="Ação 4">
-        </div>
+            <div class="BtnAcoes">
+                <img src="" alt="a">
+                <img src="" alt="b">
+                <img src="" alt="c">
+                <img src="" alt="d">
+            </div>
 
-        <div id="BtnLocal">
-            <img src="./Img/Icons/CozinhaIcon.png" alt="Cozinha">
-            <img src="./Img/Icons/RuaIcon.png" alt="Rua">
-            <img src="./Img/Icons/HaltereIcon.png" alt="Treinar">
-            <img src="./Img/Icons/QuartoIcon.png" alt="Quarto">
-            <img src="./Img/Icons/CasaDeBanhoIcon.png" alt="Casa de Banho">
+            <div class="BtnLocal">
+                <img src="./Img/Icons/Lugar/CozinhaIcon.png" alt="Cozinha">
+                <img src="./Img/Icons/Lugar/HaltereIcon.png" alt="Treinar">
+                <img src="./Img/Icons/Lugar/QuartoIcon.png" alt="Quarto">
+                <img src="./Img/Icons/Lugar/CasaDeBanhoIcon.png" alt="Casa de Banho">
+            </div>
         </div>
     </main>
 </body>
