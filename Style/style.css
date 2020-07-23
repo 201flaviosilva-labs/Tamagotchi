@@ -109,12 +109,29 @@ html body main div.Jogo div.BtnAcoes {
   justify-content: space-around;
 }
 
+html body main div.Jogo div.BtnAcoes button {
+  background: none;
+  border: none;
+}
+
+html body main div.Jogo div.BtnAcoes button img {
+  border: 1px solid black;
+}
+
 html body main div.Jogo div.BtnLocal {
   background-color: yellow;
   grid-area: BtnsLugar;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-html body main div.Jogo div.BtnLocal img {
+html body main div.Jogo div.BtnLocal button {
+  background: none;
+  border: none;
+}
+
+html body main div.Jogo div.BtnLocal button img {
   border: 1px solid black;
   border-radius: 50%;
 }
