@@ -1,3 +1,14 @@
+// Colors (Monocromádo)
+$baseColor: #ffbf01;
+$variantColor1: #eec447;
+$variantColor2: #ebb000;
+
+$secondaryColor: #6b5820;
+$secondaryColor2: #b88a00;
+
+$black: #000000;
+$white: #ffffff;
+
 html {
   body {
     padding: 10px;
@@ -8,6 +19,8 @@ html {
     grid-template-areas:
       "Header"
       "Main";
+    background-color: $baseColor;
+
     div.Demo {
       margin: 1px;
       padding: 2px 4px;
@@ -18,81 +31,110 @@ html {
       color: white;
       background-color: rgba(0, 0, 0, 0.5);
       border-radius: 2px;
+      border: 1px solid $white;
     }
+
     header {
       grid-area: Header;
+
       h1 {
         padding: 10px 0;
-        background-color: #00a7ca;
         border-radius: 10px;
         text-align: center;
         font-size: 50px;
         font-weight: bold;
+        background-color: $secondaryColor2;
+        border-bottom: 1px solid $black;
       }
     }
+
     main {
       grid-area: Main;
       display: flex;
       align-items: center;
       justify-content: center;
-      div.Jogo {
+
+      div.game-container {
         display: grid;
         grid-template-columns: repeat(2, auto);
         grid-template-rows: repeat(2, auto) 1fr auto;
         gap: 6px 6px;
         grid-template-areas:
-          "Nome Nome"
-          "Estado Estado"
-          "Imagem BtnsAcoes"
-          "BtnsLugar BtnsLugar";
-        div.Nome {
-          background-color: red;
-          grid-area: Nome;
+          "Name Name"
+          "Status Status"
+          "Board Board"
+          "SectionBtns SectionBtns";
+
+        div.name {
+          grid-area: Name;
           margin: 4px 0;
           padding: 6px;
           display: flex;
           align-items: center;
           justify-content: space-between;
           font-size: 20px;
-          border: 1px solid black;
+          border: 1px solid $black;
           border-radius: 10px;
-          button#AlterarNomeBtn {
+          background-color: $secondaryColor2;
+
+          button#changeName {
             padding: 10px 16px;
-            border: 1px dashed blue;
+            border: 1px dashed $black;
             border-radius: 6px;
             outline: none;
             background: none;
             transition: 0.5s;
             cursor: pointer;
+
             &:hover {
-              background-color: #00a7ca;
+              transform: scale(1.1);
+              background-color: $variantColor1;
             }
             &:active {
-              background-color: #75b1f7;
+              background-color: $variantColor2;
             }
           }
         }
-        div.Estado {
-          background-color: green;
-          grid-area: Estado;
+
+        div.status {
+          grid-area: Status;
+          border: 1px solid $black;
+          border-radius: 4px;
+          background-color: $secondaryColor2;
+
           ul {
+            margin: 4px 0;
             display: flex;
-            flex-direction: column;
+            justify-content: space-around;
+
             li {
-              margin-top: 4px;
+              padding: 6px 4px;
               display: flex;
               align-items: center;
+              background-color: green;
+              border: 1px solid $black;
+              border-radius: 6px;
+              transition: 0.5s;
+              cursor: help;
+
+              &:hover {
+                transform: scale(1.1);
+                background-color: $white;
+              }
             }
           }
         }
-        div.Tela {
-          background-color: blue;
-          grid-area: Imagem;
+        div#board {
+          grid-area: Board;
+          background-color: $secondaryColor2;
           position: relative;
-          border: 1px solid black;
+          border: 1px solid $black;
           width: 512px;
           height: 512px;
           border-radius: 10px;
+          border: 1px solid green;
+          box-shadow: 0 0 10px green;
+
           img {
             position: absolute;
             left: 0;
@@ -101,33 +143,29 @@ html {
             border-radius: 10px;
           }
         }
-        div.BtnAcoes {
-          background-color: orange;
-          grid-area: BtnsAcoes;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: space-around;
-          button {
-            background: none;
-            border: none;
-            img {
-              border: 1px solid black;
-            }
-          }
-        }
-        div.BtnLugar {
-          background-color: yellow;
-          grid-area: BtnsLugar;
+
+        div.section-container {
+          grid-area: SectionBtns;
           display: flex;
           align-items: center;
           justify-content: space-between;
+
           button {
             background: none;
             border: none;
+
             img {
-              border: 1px solid black;
+              background-color: $secondaryColor2;
+              border: 1px solid $black;
               border-radius: 50%;
+              transition: 0.5s;
+              &:hover {
+                transform: scale(1.1);
+                background-color: $variantColor1;
+              }
+              &:active {
+                background-color: $variantColor2;
+              }
             }
           }
         }

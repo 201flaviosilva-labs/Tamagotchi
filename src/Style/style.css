@@ -5,6 +5,7 @@ html body {
   grid-template-rows: auto 1fr;
   gap: 10px;
   grid-template-areas: "Header" "Main";
+  background-color: #ffbf01;
 }
 
 html body div.Demo {
@@ -17,6 +18,7 @@ html body div.Demo {
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 2px;
+  border: 1px solid #ffffff;
 }
 
 html body header {
@@ -25,11 +27,12 @@ html body header {
 
 html body header h1 {
   padding: 10px 0;
-  background-color: #00a7ca;
   border-radius: 10px;
   text-align: center;
   font-size: 50px;
   font-weight: bold;
+  background-color: #b88a00;
+  border-bottom: 1px solid #000000;
 }
 
 html body main {
@@ -39,30 +42,30 @@ html body main {
   justify-content: center;
 }
 
-html body main div.Jogo {
+html body main div.game-container {
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, auto) 1fr auto;
   gap: 6px 6px;
-  grid-template-areas: "Nome Nome" "Estado Estado" "Imagem BtnsAcoes" "BtnsLugar BtnsLugar";
+  grid-template-areas: "Name Name" "Status Status" "Board Board" "SectionBtns SectionBtns";
 }
 
-html body main div.Jogo div.Nome {
-  background-color: red;
-  grid-area: Nome;
+html body main div.game-container div.name {
+  grid-area: Name;
   margin: 4px 0;
   padding: 6px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 20px;
-  border: 1px solid black;
+  border: 1px solid #000000;
   border-radius: 10px;
+  background-color: #b88a00;
 }
 
-html body main div.Jogo div.Nome button#AlterarNomeBtn {
+html body main div.game-container div.name button#changeName {
   padding: 10px 16px;
-  border: 1px dashed blue;
+  border: 1px dashed #000000;
   border-radius: 6px;
   outline: none;
   background: none;
@@ -70,41 +73,57 @@ html body main div.Jogo div.Nome button#AlterarNomeBtn {
   cursor: pointer;
 }
 
-html body main div.Jogo div.Nome button#AlterarNomeBtn:hover {
-  background-color: #00a7ca;
+html body main div.game-container div.name button#changeName:hover {
+  transform: scale(1.1);
+  background-color: #eec447;
 }
 
-html body main div.Jogo div.Nome button#AlterarNomeBtn:active {
-  background-color: #75b1f7;
+html body main div.game-container div.name button#changeName:active {
+  background-color: #ebb000;
 }
 
-html body main div.Jogo div.Estado {
-  background-color: green;
-  grid-area: Estado;
+html body main div.game-container div.status {
+  grid-area: Status;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  background-color: #b88a00;
 }
 
-html body main div.Jogo div.Estado ul {
+html body main div.game-container div.status ul {
+  margin: 4px 0;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
 }
 
-html body main div.Jogo div.Estado ul li {
-  margin-top: 4px;
+html body main div.game-container div.status ul li {
+  padding: 6px 4px;
   display: flex;
   align-items: center;
+  background-color: green;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  transition: 0.5s;
+  cursor: help;
 }
 
-html body main div.Jogo div.Tela {
-  background-color: blue;
-  grid-area: Imagem;
+html body main div.game-container div.status ul li:hover {
+  transform: scale(1.1);
+  background-color: #ffffff;
+}
+
+html body main div.game-container div#board {
+  grid-area: Board;
+  background-color: #b88a00;
   position: relative;
-  border: 1px solid black;
+  border: 1px solid #000000;
   width: 512px;
   height: 512px;
   border-radius: 10px;
+  border: 1px solid green;
+  box-shadow: 0 0 10px green;
 }
 
-html body main div.Jogo div.Tela img {
+html body main div.game-container div#board img {
   position: absolute;
   left: 0;
   top: 0;
@@ -112,38 +131,30 @@ html body main div.Jogo div.Tela img {
   border-radius: 10px;
 }
 
-html body main div.Jogo div.BtnAcoes {
-  background-color: orange;
-  grid-area: BtnsAcoes;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-
-html body main div.Jogo div.BtnAcoes button {
-  background: none;
-  border: none;
-}
-
-html body main div.Jogo div.BtnAcoes button img {
-  border: 1px solid black;
-}
-
-html body main div.Jogo div.BtnLugar {
-  background-color: yellow;
-  grid-area: BtnsLugar;
+html body main div.game-container div.section-container {
+  grid-area: SectionBtns;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-html body main div.Jogo div.BtnLugar button {
+html body main div.game-container div.section-container button {
   background: none;
   border: none;
 }
 
-html body main div.Jogo div.BtnLugar button img {
-  border: 1px solid black;
+html body main div.game-container div.section-container button img {
+  background-color: #b88a00;
+  border: 1px solid #000000;
   border-radius: 50%;
+  transition: 0.5s;
+}
+
+html body main div.game-container div.section-container button img:hover {
+  transform: scale(1.1);
+  background-color: #eec447;
+}
+
+html body main div.game-container div.section-container button img:active {
+  background-color: #ebb000;
 }
