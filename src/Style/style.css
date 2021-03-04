@@ -130,7 +130,7 @@ html body main div.Jogo div.BtnAcoes button img {
   border: 1px solid black;
 }
 
-html body main div.Jogo div.BtnLocal {
+html body main div.Jogo div.BtnLugar {
   background-color: yellow;
   grid-area: BtnsLugar;
   display: flex;
@@ -138,12 +138,12 @@ html body main div.Jogo div.BtnLocal {
   justify-content: space-between;
 }
 
-html body main div.Jogo div.BtnLocal button {
+html body main div.Jogo div.BtnLugar button {
   background: none;
   border: none;
 }
 
-html body main div.Jogo div.BtnLocal button img {
+html body main div.Jogo div.BtnLugar button img {
   border: 1px solid black;
   border-radius: 50%;
 }

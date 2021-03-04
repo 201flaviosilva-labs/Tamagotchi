@@ -5,8 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./CSS/reset.css">
-    <link rel="stylesheet" href="./Style/style.min.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./src/Style/reset.css">
+    <link rel="stylesheet" href="./src/Style/style.min.css">
     <title>Tamagotchi</title>
 </head>
 
@@ -26,7 +30,7 @@
             <div class="Estado">
                 <ul>
                     <li>
-                        <img src="./Img/Icons/Estado/SaúdeIcon.png">
+                        <img src="./src/Assets/Icons/Estado/SaúdeIcon.png">
                         <div class="ProgressBarBorder" id="BarraSaude">
                             <div><span>Saúde</span></div>
                         </div>
@@ -38,7 +42,7 @@
                         </div>
                     </li>
                     <li>
-                        <img src="./Img/Icons/Estado/EnergiaIcon.png">
+                        <img src="./src/Assets/Icons/Estado/EnergiaIcon.png">
                         <div class="ProgressBarBorder" id="BarraEnergia">
                             <div><span>Energia</span></div>
                         </div>
@@ -54,21 +58,14 @@
 
             <div class="Tela">
                 <img src="" class="ImgLocal">
-                <img src="./Img/Emoções/FelizForte.png" alt="Max" class="ImgPersonagem">
+                <img src="./src/Assets/Img/Emoções/FelizFraco.png" alt="Max" class="ImgPersonagem">
             </div>
 
-            <div class="BtnAcoes">
-                <button id="btn"><img src="" alt="a"></button>
-                <button id="btn"><img src="" alt="b"></button>
-                <button id="btn"><img src="" alt="c"></button>
-                <button id="btn"><img src="" alt="d"></button>
-            </div>
-
-            <div class="BtnLocal">
-                <button id="btn"><img src="./Img/Icons/Lugar/CozinhaIcon.png" alt="Cozinha"></button>
-                <button id="btn"><img src="./Img/Icons/Lugar/HaltereIcon.png" alt="Treinar"></button>
-                <button id="btn"><img src="./Img/Icons/Lugar/QuartoIcon.png" alt="Quarto"></button>
-                <button id="btn"><img src="./Img/Icons/Lugar/CasaDeBanhoIcon.png" alt="Casa de Banho"></button>
+            <div class="BtnLugar">
+                <button id="btn"><img src="./src/Assets/Icons/Lugar/CozinhaIcon.png" alt="Cozinha"></button>
+                <button id="btn"><img src="./src/Assets/Icons/Lugar/HaltereIcon.png" alt="Treinar"></button>
+                <button id="btn"><img src="./src/Assets/Icons/Lugar/QuartoIcon.png" alt="Quarto"></button>
+                <button id="btn"><img src="./src/Assets/Icons/Lugar/CasaDeBanhoIcon.png" alt="Casa de Banho"></button>
             </div>
         </div>
     </main>

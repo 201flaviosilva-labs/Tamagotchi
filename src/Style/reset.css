@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   color: black;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Press Start 2P", "Courier New", Courier, monospace;
 }
 
 html,
@@ -11,6 +11,7 @@ body {
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
+  background-color: grey;
 }
 
 ul li {
@@ -32,7 +33,9 @@ textarea {
 
 button,
 a,
-label {
+label,
+select,
+option {
   cursor: pointer;
 }
 
