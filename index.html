@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
@@ -24,34 +24,26 @@
     <main>
         <div class="game-container">
             <div class="name">
-                <p>Max</p><button id="changeName">Alteral</button>
+                <p id="MonsterName">Max</p>
             </div>
 
             <div class="status">
                 <ul>
-                    <li>
+                    <li id="HealthStatus" title="20">
                         <img src="./src/Assets/Icons/Estado/SaúdeIcon.png">
-                        <div class="ProgressBarBorder" id="BarraSaude">
-                            <div><span>Saúde</span></div>
-                        </div>
+                        <span>Saúde</span>
                     </li>
-                    <li>
+                    <li id="HungryStatus">
                         <img src="#">
-                        <div class="ProgressBarBorder" id="BarraFome">
-                            <div><span>Fome</span></div>
-                        </div>
+                        <span>Fome</span>
                     </li>
-                    <li>
+                    <li id="EnergyStatus">
                         <img src="./src/Assets/Icons/Estado/EnergiaIcon.png">
-                        <div class="ProgressBarBorder" id="BarraEnergia">
-                            <div><span>Energia</span></div>
-                        </div>
+                        <span>Energia</span>
                     </li>
-                    <li>
+                    <li id="HygieneStatus">
                         <img src="#">
-                        <div class="ProgressBarBorder" id="BarraBexiga">
-                            <div><span>Bexiga</span></div>
-                        </div>
+                        <span>Higiene</span>
                     </li>
                 </ul>
             </div>
@@ -62,13 +54,16 @@
             </div>
 
             <div class="section-container">
-                <button id="btn"><img src="./src/Assets/Icons/Lugar/CozinhaIcon.png" alt="Cozinha"></button>
-                <button id="btn"><img src="./src/Assets/Icons/Lugar/HaltereIcon.png" alt="Treinar"></button>
-                <button id="btn"><img src="./src/Assets/Icons/Lugar/QuartoIcon.png" alt="Quarto"></button>
-                <button id="btn"><img src="./src/Assets/Icons/Lugar/CasaDeBanhoIcon.png" alt="Casa de Banho"></button>
+                <button id="btnGym"><img src="./src/Assets/Icons/Lugar/HaltereIcon.png" alt="Treinar"></button>
+                <button id="btnKitchen"><img src="./src/Assets/Icons/Lugar/CozinhaIcon.png" alt="Cozinha"></button>
+                <button id="btnBedroom"><img src="./src/Assets/Icons/Lugar/QuartoIcon.png" alt="Quarto"></button>
+                <button id="btnBathroom"><img src="./src/Assets/Icons/Lugar/CasaDeBanhoIcon.png"
+                        alt="Casa de Banho"></button>
             </div>
         </div>
     </main>
+
+    <script src="./src/Script/index.js"></script>
 </body>
 
 </html>

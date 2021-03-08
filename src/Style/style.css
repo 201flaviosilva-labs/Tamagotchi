@@ -63,22 +63,26 @@ html body main div.game-container div.name {
   background-color: #b88a00;
 }
 
-html body main div.game-container div.name button#changeName {
+html body main div.game-container div.name p#MonsterName {
+  width: 90%;
   padding: 10px 16px;
+  margin: auto;
+  text-align: center;
   border: 1px dashed #000000;
   border-radius: 6px;
   outline: none;
   background: none;
   transition: 0.5s;
+  background-color: #ffbf01;
   cursor: pointer;
 }
 
-html body main div.game-container div.name button#changeName:hover {
+html body main div.game-container div.name p#MonsterName:hover {
   transform: scale(1.1);
   background-color: #eec447;
 }
 
-html body main div.game-container div.name button#changeName:active {
+html body main div.game-container div.name p#MonsterName:active {
   background-color: #ebb000;
 }
 
@@ -153,6 +157,7 @@ html body main div.game-container div.section-container button img {
 html body main div.game-container div.section-container button img:hover {
   transform: scale(1.1);
   background-color: #eec447;
+  box-shadow: 0 0 10px #6b5820;
 }
 
 html body main div.game-container div.section-container button img:active {

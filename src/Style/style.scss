@@ -77,13 +77,17 @@ html {
           border-radius: 10px;
           background-color: $secondaryColor2;
 
-          button#changeName {
+          p#MonsterName {
+            width: 90%;
             padding: 10px 16px;
+            margin: auto;
+            text-align: center;
             border: 1px dashed $black;
             border-radius: 6px;
             outline: none;
             background: none;
             transition: 0.5s;
+            background-color: $baseColor;
             cursor: pointer;
 
             &:hover {
@@ -162,6 +166,7 @@ html {
               &:hover {
                 transform: scale(1.1);
                 background-color: $variantColor1;
+                box-shadow: 0 0 10px $secondaryColor;
               }
               &:active {
                 background-color: $variantColor2;
