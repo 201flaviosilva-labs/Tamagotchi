@@ -2,16 +2,27 @@
   "name": "Tamagotchi",
   "version": "1.0.0",
   "description": "Toma conta do teu animal virtual",
-  "main": "index.js",
+  "homepage": "https://mangito.github.io/Tamagotchi/",
+  "private": false,
+  "author": {
+    "name": "Mangito",
+    "email": "mangitogame@gmail.com",
+    "url": "https://mangito.github.io/Manguito/"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "SASS",
+    "JavaScript",
+    "Games",
+    "Tamagotchi"
+  ],
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Mangito/Tamagotchi.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Mangito/Tamagotchi/issues"
-  },
-  "homepage": "https://github.com/Mangito/Tamagotchi#readme"
+  }
 }
