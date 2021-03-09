@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./src/Style/reset.css">
@@ -24,24 +23,24 @@
     <main>
         <div class="game-container">
             <div class="name">
-                <p id="MonsterName">Max</p>
+                <p id="MonsterName" title="Alterar nome">Max</p>
             </div>
 
             <div class="status">
                 <ul>
-                    <li id="HealthStatus" title="20">
+                    <li id="HealthStatus" title="100">
                         <img src="./src/Assets/Icons/Estado/SaúdeIcon.png">
                         <span>Saúde</span>
                     </li>
-                    <li id="HungryStatus">
+                    <li id="HungryStatus" title="100">
                         <img src="#">
                         <span>Fome</span>
                     </li>
-                    <li id="EnergyStatus">
+                    <li id="EnergyStatus" title="100">
                         <img src="./src/Assets/Icons/Estado/EnergiaIcon.png">
                         <span>Energia</span>
                     </li>
-                    <li id="HygieneStatus">
+                    <li id="HygieneStatus" title="100">
                         <img src="#">
                         <span>Higiene</span>
                     </li>
@@ -54,11 +53,21 @@
             </div>
 
             <div class="section-container">
-                <button id="btnGym"><img src="./src/Assets/Icons/Lugar/HaltereIcon.png" alt="Treinar"></button>
-                <button id="btnKitchen"><img src="./src/Assets/Icons/Lugar/CozinhaIcon.png" alt="Cozinha"></button>
-                <button id="btnBedroom"><img src="./src/Assets/Icons/Lugar/QuartoIcon.png" alt="Quarto"></button>
-                <button id="btnBathroom"><img src="./src/Assets/Icons/Lugar/CasaDeBanhoIcon.png"
-                        alt="Casa de Banho"></button>
+                <button id="btnGym" title="Treinar">
+                    <img src="./src/Assets/Icons/Lugar/HaltereIcon.png" alt="Treinar">
+                </button>
+
+                <button id="btnKitchen" title="Cozinha">
+                    <img src="./src/Assets/Icons/Lugar/CozinhaIcon.png" alt="Cozinha">
+                </button>
+
+                <button id="btnBedroom" title="Quarto">
+                    <img src="./src/Assets/Icons/Lugar/QuartoIcon.png" alt="Quarto">
+                </button>
+
+                <button id="btnBathroom" title="Casa de Banho">
+                    <img src="./src/Assets/Icons/Lugar/CasaDeBanhoIcon.png" alt="Casa de Banho">
+                </button>
             </div>
         </div>
     </main>
