@@ -4,12 +4,17 @@ monsterName.addEventListener("click", () => {
 	monsterName.textContent = prompt("Novo nome: ", monsterName.textContent) || monsterName.textContent;
 });
 
+// https://i.ibb.co/q5kV4m0/Feliz-Forte.png
+// https://i.ibb.co/hyVXxPT/Feliz-Fraco.png
+// https://i.ibb.co/TBNDqBh/Morto.png
+// https://i.ibb.co/tmNzj2z/Neutro.png
+// https://i.ibb.co/N2M7Y6M/Triste.png 
 const statusImgs = {
-	FelizForte: "/src/Assets/Img/Emoções/FelizForte.png",
-	FelizFraco: "/src/Assets/Img/Emoções/FelizFraco.png",
-	Neutro: "/src/Assets/Img/Emoções/Neutro.png",
-	Triste: "/src/Assets/Img/Emoções/Triste.png",
-	Morto: "/src/Assets/Img/Emoções/Morto.png",
+	FelizForte: "https://i.ibb.co/q5kV4m0/Feliz-Forte.png",
+	FelizFraco: "https://i.ibb.co/hyVXxPT/Feliz-Fraco.png",
+	Neutro: "https://i.ibb.co/tmNzj2z/Neutro.png",
+	Triste: "https://i.ibb.co/N2M7Y6M/Triste.png ",
+	Morto: "https://i.ibb.co/TBNDqBh/Morto.png",
 }
 const ImgPersonagem = document.getElementById("ImgPersonagem");
 const AlertMensaje = document.getElementById("Alert");
