@@ -10,11 +10,13 @@
 
     <link rel="stylesheet" href="./src/Style/reset.css">
     <link rel="stylesheet" href="./src/Style/style.min.css">
+
+    <link rel="shortcut icon" href="./src/Assets/Img/Emoções/Feliz.png" type="image/x-icon">
     <title>Tamagotchi</title>
 </head>
 
 <body>
-    <div class="Demo">Demo</div>
+    <div class="Demo">Alpha</div>
 
     <header>
         <h1>Tamagotchi</h1>
@@ -22,6 +24,8 @@
 
     <main>
         <div class="game-container">
+            <div id="Alert"></div>
+
             <div class="name">
                 <p id="MonsterName" title="Alterar nome">Max</p>
             </div>
@@ -33,7 +37,7 @@
                         <span>Saúde</span>
                     </li>
                     <li id="HungryStatus" title="100">
-                        <img src="#">
+                        <img src="./src/Assets/Icons/Estado/Fome.png">
                         <span>Fome</span>
                     </li>
                     <li id="EnergyStatus" title="100">
@@ -41,14 +45,13 @@
                         <span>Energia</span>
                     </li>
                     <li id="HygieneStatus" title="100">
-                        <img src="#">
+                        <img src="./src/Assets/Icons/Estado/Dentes.png">
                         <span>Higiene</span>
                     </li>
                 </ul>
             </div>
 
             <div id="board">
-                <img src="" id="ImgLocal">
                 <img src="./src/Assets/Img/Emoções/FelizFraco.png" alt="Max" id="ImgPersonagem">
             </div>
 
@@ -69,6 +72,8 @@
                     <img src="./src/Assets/Icons/Lugar/CasaDeBanhoIcon.png" alt="Casa de Banho">
                 </button>
             </div>
+
+            <button id="btnReset">Recomeçar</button>
         </div>
     </main>
 

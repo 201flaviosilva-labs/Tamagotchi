@@ -5,11 +5,13 @@ $variantColor2: #ebb000;
 
 $secondaryColor: #6b5820;
 $secondaryColor2: #b88a00;
+$secondaryColor3: #4d4019;
 
 $black: #000000;
 $white: #ffffff;
 
 html {
+  background: linear-gradient(132deg, $baseColor 0%, $variantColor2 100%);
   body {
     padding: 10px;
     display: grid;
@@ -19,7 +21,7 @@ html {
     grid-template-areas:
       "Header"
       "Main";
-    background-color: $baseColor;
+    background: none;
 
     div.Demo {
       margin: 1px;
@@ -57,13 +59,31 @@ html {
       div.game-container {
         display: grid;
         grid-template-columns: repeat(2, auto);
-        grid-template-rows: repeat(2, auto) 1fr auto;
+        grid-template-rows: repeat(2, auto) 1fr auto 30px;
         gap: 6px 6px;
         grid-template-areas:
           "Name Name"
           "Status Status"
           "Board Board"
           "SectionBtns SectionBtns";
+
+        div#Alert {
+          position: fixed;
+          top: -100px;
+          // top: 100px;
+          left: 50%;
+          transform: translate(-50%, 0);
+          padding: 10px 20px;
+          border: 2px solid $black;
+          border-radius: 8px;
+          box-shadow: 2px 2px 6px $black;
+          background-color: $variantColor1;
+          color: $secondaryColor3;
+          text-shadow: 0 0 2px $white;
+          font-style: bold;
+          text-align: center;
+          z-index: 10;
+        }
 
         div.name {
           grid-area: Name;
@@ -172,6 +192,20 @@ html {
                 background-color: $variantColor2;
               }
             }
+          }
+        }
+
+        button {
+          &#btnReset {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            padding: 4px 10px;
+            border: 1px solid $black;
+            border-radius: 4px;
+            background-color: $variantColor1;
+            box-shadow: 0 0 10px $secondaryColor3;
           }
         }
       }
