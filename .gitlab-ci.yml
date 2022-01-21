@@ -1,13 +1,16 @@
+# Based in: https://gitlab.com/AaronErhardt/crab-tag/-/blob/master/.gitlab-ci.yml
 
 image: alpine:latest
 
 pages:
   stage: deploy
   script:
-    - echo 'Nothing to do...'
+    - ls
+    - mkdir public
+    - cp -r ./src public
+    - cp -r index.html public
   artifacts:
     paths:
       - public
-    expire_in: 1 day
   only:
-    - master
+    - main
